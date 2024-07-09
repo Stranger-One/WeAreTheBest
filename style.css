@@ -2270,4 +2270,19 @@ footer .copyright {
     .subscribe .email {
         width: 100%;
     }
+
+    .subscribe .email input {
+        width: 70%;
+    }
+
+    .subscribe .email button {
+        width: 30%;
+        font-size: 16px;
+
+    }
+    .blogs {
+        align-items: start;
+        margin-top: 100px;
+    }
+    
 }
