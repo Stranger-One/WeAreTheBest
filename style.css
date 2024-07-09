@@ -1981,17 +1981,21 @@ footer .copyright {
     .tour-hero .description {
         width: 100%;
     }
+
     .tour-hero {
         width: 100%;
         margin-top: 70px;
     }
+
     .tour-hero .details-container {
         flex-wrap: wrap;
     }
+
     .reviews .container .review-box {
         width: 48%;
         min-width: 45%;
     }
+
     .tour-hero .description {
         width: 100%;
         width: 100%;
@@ -2000,19 +2004,23 @@ footer .copyright {
         -webkit-line-clamp: 10;
         overflow: hidden;
     }
+
     .itinerary-page .full-page {
         width: 100%;
         flex-direction: column-reverse;
     }
+
     .itinerary-page .full-page .right .sticky-box {
         width: 100%;
         height: fit-content;
         display: none;
         position: static;
     }
+
     .itinerary-page .full-page .left {
         width: 100%;
     }
+
     .itinerary-page .full-page .right {
         width: 100%;
     }
@@ -2026,6 +2034,7 @@ footer .copyright {
         margin-top: 10px;
         flex-wrap: wrap;
     }
+
     .itinerary-page .full-page .left .other-facility .lists .item {
         width: 45%;
         height: 100px;
@@ -2036,23 +2045,28 @@ footer .copyright {
         height: fit-content;
         flex-wrap: wrap;
     }
+
     .itinerary-page .full-page .left .near-place .place {
         min-width: 120px;
         width: 100%;
         height: 100px;
         padding: 0 20px;
     }
+
     .itinerary-page .full-page .left .tour-operator .about {
         width: 100%;
         flex-direction: column-reverse;
     }
+
     .itinerary-page .full-page .left .tour-operator .about .descrip {
         width: 100%;
         margin-top: 10px;
     }
+
     .itinerary-page .full-page .left .tour-operator .about .profile {
         width: 250px;
     }
+
     .reviews .container .review-box {
         width: 100%;
         min-width: 45%;
