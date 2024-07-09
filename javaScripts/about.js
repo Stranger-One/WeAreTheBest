@@ -35,7 +35,7 @@ slideOnScroll.forEach((slide) => {
             start: "top 90%",
             end: "top 80%",
             // markers: true,
-            scrub: 1,
+            // scrub: 1,
 
         }
     })
