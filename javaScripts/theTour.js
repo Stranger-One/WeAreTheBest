@@ -1,14 +1,51 @@
 import { placeData } from "./allCards.js";
 
 
+// =================== menu function ================= //
 
+let open = document.querySelector(".menu-btn")
+let close = document.querySelector(".close")
+let menu = document.querySelector("header nav ul")
+let links = document.querySelectorAll("header nav ul li")
+open.addEventListener("click", (e) => {
+    menu.style.right = "0%"
+})
+close.addEventListener("click", (e) => {
+    menu.style.right = "-100%"
+})
+links.forEach((elem) => {
+    elem.addEventListener("click", () => {
+        menu.style.right = "-100%"
+    })
+})
+
+// =================== Header function ================= //
+let prevScrollVal = 0;
+window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    let scrollVal = window.scrollY
+
+    if (scrollVal > prevScrollVal) {
+        header.style.top = "-80px"
+        menu.style.right = "-100%"
+    }
+    else if (scrollVal < prevScrollVal) {
+        header.style.top = "0px"
+        menu.style.right = "-100%"
+    }
+    prevScrollVal = scrollVal
+
+})
+
+
+// ============= Page Loading ==============//
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
 }
 
 const cardId = getQueryParam('id');
-console.log(cardId)
+// console.log(cardId)
 
 
 let relatedCards = ``;
@@ -44,13 +81,13 @@ let pageDetails = placeData.filter( elem => elem.id == cardId)[0]
 let tourPage = `
 <section class="tour-hero main-p">
             <span>
-                <h4 class="address">${pageDetails.location} • <i class="ri-star-fill"></i> ${pageDetails.rating} (236) </h4>
+                <h4 class="address">${pageDetails.location || "Address"} • <i class="ri-star-fill"></i> ${pageDetails.rating} (236) </h4>
             </span>
             <span>
-                <h1 class="place">The complete ${pageDetails.place} tour</h1>
+                <h1 class="place">The complete ${pageDetails.place || "Place"} tour</h1>
             </span>
             <span>
-                <p class="description">${pageDetails.description}</p>
+                <p class="description">${pageDetails.description || "Description"}</p>
             </span>
             <span>
                 <div class="details-container">
@@ -60,7 +97,7 @@ let tourPage = `
                         </div>
                         <div class="text">
                             <h4>Duration</h4>
-                            <h3>${pageDetails.duration} Days</h3>
+                            <h3>${pageDetails.duration || 3} Days</h3>
                         </div>
                     </div>
                     <div class="details-item">
@@ -69,7 +106,7 @@ let tourPage = `
                         </div>
                         <div class="text">
                             <h4>Group size</h4>
-                            <h3>${pageDetails.group_size} people</h3>
+                            <h3>${pageDetails.group_size || "1-10"} people</h3>
                         </div>
                     </div>
                     <div class="details-item">
@@ -78,7 +115,7 @@ let tourPage = `
                         </div>
                         <div class="text">
                             <h4>Age range</h4>
-                            <h3>${pageDetails.age_range}</h3>
+                            <h3>${pageDetails.age_range || "All ages"}</h3>
                         </div>
                     </div>
                     <div class="details-item">
@@ -87,7 +124,7 @@ let tourPage = `
                         </div>
                         <div class="text">
                             <h4>Language</h4>
-                            <h3>${pageDetails.language}</h3>
+                            <h3>${pageDetails.language || "Hindi"}</h3>
                         </div>
                     </div>
                     <div class="details-item">
@@ -103,7 +140,7 @@ let tourPage = `
             </span>
             <span class="banner-cover">
                 <div class="cover-image">
-                    <img src="${pageDetails.image}" alt="">
+                    <img src="${pageDetails.image || images/New-york-city.jpg}" alt="">
                 </div>
             </span>
             <div class="overview">
@@ -111,7 +148,7 @@ let tourPage = `
                     <h2>Overview</h2>
                 </span>
                 <span>
-                    <p>${pageDetails.description}</p>
+                    <p>${pageDetails.description || Description}</p>
                 </span>
             </div>
         </section>
@@ -132,7 +169,7 @@ let tourPage = `
                             illum laborum blanditiis dolorum, aut porro recusandae illo a ab, qui fugit amet dicta
                             labore praesentium.</p>
                         <div class="itinerary-container">
-                        ${pageDetails.itinerary.map( elem => `
+                        ${pageDetails.itinerary ? pageDetails.itinerary.map( elem => `
                             <div class="itinerary-item day-${elem.day}">
                                 <input type="radio" id="day-${elem.day}" name="itinerary">
                                 <label for="day-${elem.day}">
@@ -149,10 +186,7 @@ let tourPage = `
                                 ` ).join("")}
                                 </div>
                             </div>
-                            `).join("")}
-                            
-
-
+                        `).join("") : ""}
                         </div>
                     </div>
                     <div class="other-facility">
@@ -162,26 +196,30 @@ let tourPage = `
                                 <i class="ri-rfid-line"></i>
                                 <h2>Internet</h2>
                                 <div>
-                                ${pageDetails.other_facilities.internet == "Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>`}
+                                ${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>` : "Not Found"}
                                     
                                    
-                                    <p>${pageDetails.other_facilities.internet == "Available" ? "" :"not"} available</p>
+                                    <p>${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? "" :"not" : "Not Found" } available</p>
+
                                 </div>
                             </div>
                             <div class="item">
                                 <i class="ri-git-commit-line"></i>
                                 <h2>Electricity</h2>
                                 <div>
-                                ${pageDetails.other_facilities.internet == "Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>`}
-                                    <p>${pageDetails.other_facilities.internet == "Available" ? "" :"not"} available</p>
+                                ${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>` : "Not Found"}
+
+                                    <p>${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? "" :"not" : "Not Found" } available</p>
+
                                 </div>
                             </div>
                             <div class="item">
                                 <i class="ri-car-line"></i>
                                 <h2>Transportation</h2>
                                 <div>
-                                ${pageDetails.other_facilities.internet == "Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>`}
-                                    <p>${pageDetails.other_facilities.internet == "Available" ? "" :"not"} available</p>
+                                ${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>` : "Not Found"}
+
+                                    <p>${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? "" :"not" : "Not Found"} available</p>
                                 </div>
                             </div>
 
@@ -190,12 +228,12 @@ let tourPage = `
                     <div class="near-place">
                         <h2 class="head">Nearest Places</h2>
                         <div class="place-cont">
-                        ${pageDetails.nearest_famous_places.map(place => `
+                        ${pageDetails.nearest_famous_places ? pageDetails.nearest_famous_places.map(place => `
                             <div class="place">
                                 <h2 class="name">${place.place_name}</h2>
                                 <p class="dist">${place.distance_km} km</p>
                             </div>
-                        `).join("")}
+                        `).join("") : "Not found"}
                         </div>
                     </div>
                     <div class="tour-operator">
@@ -240,20 +278,20 @@ let tourPage = `
         <section class="gallery main-p">
             <h2 class="head">Our galley</h2>
             <div class="container">
-                <div style="background-image: url(${pageDetails.gallery[0]});" class="item"></div>
-                <div style="background-image: url(${pageDetails.gallery[1]});" class="item col-2"></div>
-                <div style="background-image: url(${pageDetails.gallery[2]});" class="item row-col-2"></div>
-                <div style="background-image: url(${pageDetails.gallery[3]});" class="item row-col-2"></div>
-                <div style="background-image: url(${pageDetails.gallery[4]});" class="item"></div>
-                <div style="background-image: url(${pageDetails.gallery[5]});" class="item col-2"></div>
-                <div style="background-image: url(${pageDetails.gallery[6]});" class="item"></div>
+                <div style="background-image: url(${pageDetails.gallery[0] || images/New-york-city.jpg});" class="item"></div>
+                <div style="background-image: url(${pageDetails.gallery[1] || images/New-york-city.jpg });" class="item col-2"></div>
+                <div style="background-image: url(${pageDetails.gallery[2] || images/New-york-city.jpg });" class="item row-col-2"></div>
+                <div style="background-image: url(${pageDetails.gallery[3] || images/New-york-city.jpg });" class="item row-col-2"></div>
+                <div style="background-image: url(${pageDetails.gallery[4] || images/New-york-city.jpg });" class="item"></div>
+                <div style="background-image: url(${pageDetails.gallery[5] || images/New-york-city.jpg });" class="item col-2"></div>
+                <div style="background-image: url(${pageDetails.gallery[6] || images/New-york-city.jpg });" class="item"></div>
             </div>
         </section>
 
         <section class="reviews main-p">
             <h2 class="head">Tourist Reviews</h2>
             <div class="container">
-            ${pageDetails.tourist_reviews.map(review => `
+            ${pageDetails.tourist_reviews ? pageDetails.tourist_reviews.map(review => `
                 <div class="review-box">
                     <h3 class="rating">
                         <span>
@@ -272,7 +310,7 @@ let tourPage = `
                         <h4 class="address">${review.belongs_from}</h4>
                     </div>
                 </div>
-            `).join("")}
+            `).join("") : "Not Found"}
             </div>
         </section>
 
@@ -300,3 +338,14 @@ let tourPage = `
 `
 
 document.querySelector("#full-page").innerHTML = tourPage
+
+
+
+// ============= redirect to tour page function ===============//
+document.querySelectorAll(".gototour").forEach((card) => {
+    card.addEventListener("click", (e) => {
+        // console.log(e.target.closest(".gototour").getAttribute("id"))
+        let cardId = e.target.closest(".gototour").getAttribute("id")
+        window.location.href = `theTour.html?id=${encodeURIComponent(cardId)}`;
+    })
+})

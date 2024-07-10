@@ -1,6 +1,24 @@
 import { placeData } from "./allCards.js";
 
 
+// =================== menu function ================= //
+
+let open = document.querySelector(".menu-btn")
+let close = document.querySelector(".close")
+let menu = document.querySelector("header nav ul")
+let links = document.querySelectorAll("header nav ul li")
+open.addEventListener("click", (e) => {
+    menu.style.right = "0%"
+})
+close.addEventListener("click", (e) => {
+    menu.style.right = "-100%"
+})
+links.forEach((elem) => {
+    elem.addEventListener("click", () => {
+        menu.style.right = "-100%"
+    })
+})
+
 // =================== Header function ================= //
 let prevScrollVal = 0;
 window.addEventListener("scroll", () => {
@@ -9,13 +27,16 @@ window.addEventListener("scroll", () => {
 
     if (scrollVal > prevScrollVal) {
         header.style.top = "-80px"
+        menu.style.right = "-100%"
     }
     else if (scrollVal < prevScrollVal) {
         header.style.top = "0px"
+        menu.style.right = "-100%"
     }
     prevScrollVal = scrollVal
 
 })
+
 
 //================ Search function =================//
 
@@ -99,6 +120,8 @@ searchButton.addEventListener("click", (e) => {
         `
         resultContainer.innerHTML += card
     })
+    redirectToTour()
+
 })
 
 
@@ -106,7 +129,7 @@ searchButton.addEventListener("click", (e) => {
 const root = document.documentElement;
 let cardNum = getComputedStyle(root).getPropertyValue('--recoCardNumber');
 console.log(cardNum)
-function swiperCard(){
+function swiperCard() {
     let swiper = new Swiper(".mySwiper", {
         slidesPerView: cardNum,
         spaceBetween: 10,
@@ -181,13 +204,16 @@ for (let i = 1; i <= 10; i++) {
 
 
 // ============= redirect to tour page function ===============//
-document.querySelectorAll(".gototour").forEach((card) => {
-    card.addEventListener("click", (e) => {
-        console.log(e.target.closest(".gototour").getAttribute("id"))
-        let cardId = e.target.closest(".gototour").getAttribute("id")
-        window.location.href = `theTour.html?id=${encodeURIComponent(cardId)}`;
+function redirectToTour() {
+    document.querySelectorAll(".gototour").forEach((card) => {
+        card.addEventListener("click", (e) => {
+            console.log(e.target.closest(".gototour").getAttribute("id"))
+            let cardId = e.target.closest(".gototour").getAttribute("id")
+            window.location.href = `theTour.html?id=${encodeURIComponent(cardId)}`;
+        })
     })
-})
+}
+redirectToTour()
 
 
 // ============== Animations function ===============//

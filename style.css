@@ -40,7 +40,7 @@ p {
     --star-bg: #333333;
     --main-text: #03001C;
     --blue-bg: #150485;
-    --light-text: #adadadda;
+    --light-text: #adadad85;
     --active-link: #03001C;
     --recoCardNumber: 5;
 }
@@ -119,6 +119,10 @@ html {
     color: var(--main-text);
     position: relative;
 }
+body .no-scroll {
+    position: fixed;
+    width: 100%;
+}
 
 
 /* ================= Header =============== */
@@ -157,6 +161,12 @@ header nav ul {
 
 header nav ul li {
     position: relative;
+}
+.close{
+    display: none;
+}
+.menu-btn{
+    display: none;
 }
 
 .active-link a {
@@ -308,15 +318,6 @@ footer .copyright {
     position: relative;
 }
 
-.hero .top-hero .hero-content .hero-header::before {
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    color: var(--main-bg);
-    content: "Expolre The World With Us";
-    font-size: 4vw;
-    /* text-shadow: 0 0 5px var(--main-bg); */
-}
 
 .hero .top-hero .form-container {
     width: 60%;
@@ -342,7 +343,7 @@ footer .copyright {
 }
 
 .hero .top-hero .form-container .search-form .search-input {
-    width: 55%;
+    width: 79%;
     padding: 10px 15px;
     border: none;
     outline: none;
@@ -353,17 +354,6 @@ footer .copyright {
     background-color: var(--main-bg);
 }
 
-.hero .top-hero .form-container .search-form .date {
-    width: 20%;
-    padding: 10px 15px;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    flex-shrink: 0;
-    font-size: 17px;
-    height: 40px;
-    background-color: var(--main-bg);
-}
 
 .hero .top-hero .form-container .search-form .search {
     width: 20%;
@@ -2083,8 +2073,44 @@ footer .copyright {
         padding: 0 20px;
     }
 
+    header nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--main-text);
+        color: var(--main-bg);
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 100px;
+        transition: 0.2s;
+    }
+    header nav ul li a {
+        color: var(--main-bg);
+        font-size: 22px;
+    }
+    .active-link a {
+        color: var(--main-bg);
+    }
+    .close {
+        display: block;
+        font-size: 36px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        background-color: var(--main-text);
+    }
+    .menu-btn{
+        display: block;
+        font-size: 24px;
+    }
+    header nav ul li:hover a {
+        color: var(--main-bg);
+    }
+
     .hero .top-hero {
-        height: 70vh;
+        height: 60vh;
     }
 
     .hero .top-hero .hero-content {
@@ -2093,11 +2119,8 @@ footer .copyright {
     }
 
     .hero .top-hero .hero-content .hero-header {
-        font-size: 5vw;
-    }
-
-    .hero .top-hero .hero-content .hero-header::before {
-        font-size: 5vw;
+        font-size: 7vw;
+        text-align: center;
     }
 
     span {
@@ -2107,7 +2130,7 @@ footer .copyright {
     }
 
     .hero .top-hero .form-container {
-        top: 40%;
+        top: 60%;
         left: 50%;
     }
 
@@ -2280,9 +2303,10 @@ footer .copyright {
         font-size: 16px;
 
     }
+
     .blogs {
         align-items: start;
         margin-top: 100px;
     }
-    
+
 }
