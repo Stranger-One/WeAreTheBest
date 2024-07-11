@@ -314,7 +314,7 @@ footer .copyright {
 
 .hero .top-hero .hero-content .hero-header {
     font-size: 4vw;
-    color: var(--main-text);
+    color: var(--main-bg);
     position: relative;
 }
 
@@ -594,13 +594,17 @@ footer .copyright {
 
 .trending-card .card-details .add-rat {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     margin-bottom: 5px;
 }
 
 .trending-card .card-details .add-rat h4 {
     font-size: 14px;
+}
+.trending-card .card-details .add-rat h4:nth-child(2) {
+    font-size: 14px;
+    white-space: nowrap;
 }
 
 .trending-card .card-details .add-rat h4 i {
@@ -843,36 +847,83 @@ footer .copyright {
 }
 
 .operators {
+    align-self: stretch;
     width: 280px;
-    height: 180px;
+    min-height: 260px;
+    height: fit-content;
+    padding: 10px;
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
     justify-content: center;
     border-radius: 6px;
     border: 1px solid black;
     box-shadow: 0 0 5px var(--main-text);
-
+    transition: 0.2s;
+}
+.operators:hover{
+    box-shadow: 0 0 20px var(--main-text);
+    
 }
 
-.operators h2 {
+.operators h3{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+}
+.operators strong{
+    
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.operators .profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+    overflow: hidden;
+    border: 1px solid var(--main-text);
+}
+.operators .profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.operators .name {
     font-size: 18px;
+    font-weight: 700;
+}
+    
+.operators .profession {
+    font-style: italic;
+    font-weight: 600;
+}
+    /* 
+.operators .expe {
+    font-size: 16px;
     text-transform: capitalize;
 }
 
-.operators h4 {
+.operators .rating {
     font-size: 14px;
     text-transform: capitalize;
 }
 
-.operators h3 {
-    font-size: 14px;
-    text-transform: capitalize;
-}
-
-.operators h3 span {
+.operators .rating span {
     margin-right: 5px;
 }
+.operators .location {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.operators .lang {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+ */
 
 .touch {
     flex-direction: column;
@@ -1509,8 +1560,8 @@ footer .copyright {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 20px;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
 }
 
 .reviews .container .review-box {
@@ -1630,6 +1681,25 @@ footer .copyright {
 .community-btn:hover {
     transform: scale(1.05);
 }
+
+.all-operators{
+    width: 100%;
+    height: fit-content;
+    align-items: start;
+    gap: 10px; 
+}
+.all-operators .head{
+    text-align: start;
+}
+.all-operators .operator-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 
 .founder {
     display: grid;
@@ -2019,7 +2089,7 @@ footer .copyright {
     .itinerary-page .full-page .left .other-facility .lists {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         gap: 20px;
         margin-top: 10px;
         flex-wrap: wrap;
@@ -2034,11 +2104,15 @@ footer .copyright {
         width: fit-content;
         height: fit-content;
         flex-wrap: wrap;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .itinerary-page .full-page .left .near-place .place {
         min-width: 120px;
-        width: 100%;
+        width: 48%;
         height: 100px;
         padding: 0 20px;
     }
@@ -2058,8 +2132,14 @@ footer .copyright {
     }
 
     .reviews .container .review-box {
-        width: 100%;
-        min-width: 45%;
+        width: 48%;
+        min-width: 250px;
+    }
+    .reviews .container .review-box .about {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+        flex-direction: column;
     }
 }
 
@@ -2301,7 +2381,6 @@ footer .copyright {
     .subscribe .email button {
         width: 30%;
         font-size: 16px;
-
     }
 
     .blogs {

@@ -37,7 +37,7 @@ window.addEventListener("scroll", () => {
 
 })
 
-for(let i=0; i<=20; i++){
+for(let i=0; i<20; i++){
     let card = `
                 <div class="dests-card gototour slideOnScroll" id="${placeData[i].id}">
                     <div class="dests-img">
@@ -60,6 +60,36 @@ for(let i=0; i<=20; i++){
     `
     document.querySelector(".dests-container").innerHTML += card
 }
+let showClick = 0;
+document.querySelector(".showmore").addEventListener("click", () => {
+    let start = 20 + (showClick * 20) + 1
+    let end = 40 + (showClick * 20) + 1
+    showClick ++
+    for(let i=start; i<end; i++){
+        if(i > placeData.length) return
+        let card = `
+                    <div class="dests-card gototour slideOnScroll" id="${placeData[i].id}">
+                        <div class="dests-img">
+                            <img src="${placeData[i].image}" alt="dest1">
+                        </div>
+                        <div class="dests-info">
+                            <p class="address">${placeData[i].location}</p>
+                            <h3 class="name">${placeData[i].place}</h3>
+                            <div class="rating">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <h3>${placeData[i].rating}</h3>
+                            </div>
+                            <p class="about">${placeData[i].description}</p>
+                        </div>
+                    </div>
+        `
+        document.querySelector(".dests-container").innerHTML += card
+    }
+})
 
 
 // ============= redirect to tour page function ===============//

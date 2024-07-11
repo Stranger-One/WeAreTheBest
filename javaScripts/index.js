@@ -1,4 +1,5 @@
 import { placeData } from "./allCards.js";
+import { operators } from "./operators.js";
 
 
 // =================== menu function ================= //
@@ -42,6 +43,12 @@ window.addEventListener("scroll", () => {
 
 let input = document.querySelector(".search-input")
 let searchButton = document.querySelector(".search")
+
+input.addEventListener("click", () => {
+    window.scrollTo(0, 200)
+})
+
+
 let autoSugg = []
 let getPlaces = [];
 input.onkeyup = () => {
@@ -198,6 +205,34 @@ for (let i = 1; i <= 10; i++) {
         </div>       
     `
     document.querySelector(".recommendation-container").innerHTML += recommended
+}
+
+
+// ============= operators function ===============//
+for (let i = 0; i <= 3; i++) {
+    let operator = `
+                <div class="operators slideOnScroll" id="${operators[i].id}">
+                    <div class="profile">
+                        <img src="${operators[i].profile}" alt="">
+                    </div>
+                    <h3 class="name">${operators[i].name}</h3>
+                    <h3 class="profession">${operators[i].profession}</h3>
+                    <h3 class="expe">${operators[i].experience} of experience</h3>
+                    <h3 class="location"><strong>From: </strong>${operators[i].location}</h3>
+                    <h3 class="lang"><strong>languages spoken: </strong>${operators[i].languages_spoken}</h3>
+                    <h3 class="rating">
+                        <span>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </span>
+                        ${operators[i].rating}
+                    </h3>
+                </div>      
+    `
+    document.querySelector(".operator-content").innerHTML += operator
 }
 
 

@@ -196,20 +196,19 @@ let tourPage = `
                                 <i class="ri-rfid-line"></i>
                                 <h2>Internet</h2>
                                 <div>
-                                ${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>` : "Not Found"}
+                                ${pageDetails.facilities.internet != "Not Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>`}
                                     
                                    
-                                    <p>${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? "" :"not" : "Not Found" } available</p>
-
+                                    <p>${pageDetails.facilities.internet}</p>
                                 </div>
                             </div>
                             <div class="item">
                                 <i class="ri-git-commit-line"></i>
                                 <h2>Electricity</h2>
                                 <div>
-                                ${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>` : "Not Found"}
+                                ${pageDetails.facilities.electricity != "Not Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>`}
 
-                                    <p>${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? "" :"not" : "Not Found" } available</p>
+                                    <p>${pageDetails.facilities.electricity}</p>
 
                                 </div>
                             </div>
@@ -217,9 +216,9 @@ let tourPage = `
                                 <i class="ri-car-line"></i>
                                 <h2>Transportation</h2>
                                 <div>
-                                ${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>` : "Not Found"}
+                                ${pageDetails.facilities.transportation != "Not Available" ? ` <i class="ri-checkbox-circle-line"></i>` :`<i class="ri-close-circle-line"></i>`}
 
-                                    <p>${pageDetails.other_facilities ? pageDetails.other_facilities.internet == "Available" ? "" :"not" : "Not Found"} available</p>
+                                    <p>${pageDetails.facilities.transportation}</p>
                                 </div>
                             </div>
 
@@ -228,9 +227,9 @@ let tourPage = `
                     <div class="near-place">
                         <h2 class="head">Nearest Places</h2>
                         <div class="place-cont">
-                        ${pageDetails.nearest_famous_places ? pageDetails.nearest_famous_places.map(place => `
+                        ${pageDetails.nearest_places ? pageDetails.nearest_places.map(place => `
                             <div class="place">
-                                <h2 class="name">${place.place_name}</h2>
+                                <h2 class="name">${place.name}</h2>
                                 <p class="dist">${place.distance_km} km</p>
                             </div>
                         `).join("") : "Not found"}
@@ -278,13 +277,13 @@ let tourPage = `
         <section class="gallery main-p">
             <h2 class="head">Our galley</h2>
             <div class="container">
-                <div style="background-image: url(${pageDetails.gallery[0] || images/New-york-city.jpg});" class="item"></div>
-                <div style="background-image: url(${pageDetails.gallery[1] || images/New-york-city.jpg });" class="item col-2"></div>
-                <div style="background-image: url(${pageDetails.gallery[2] || images/New-york-city.jpg });" class="item row-col-2"></div>
-                <div style="background-image: url(${pageDetails.gallery[3] || images/New-york-city.jpg });" class="item row-col-2"></div>
-                <div style="background-image: url(${pageDetails.gallery[4] || images/New-york-city.jpg });" class="item"></div>
-                <div style="background-image: url(${pageDetails.gallery[5] || images/New-york-city.jpg });" class="item col-2"></div>
-                <div style="background-image: url(${pageDetails.gallery[6] || images/New-york-city.jpg });" class="item"></div>
+                <div style="background-image: url(${pageDetails.gallery[0] || "https://media.gettyimages.com/id/645085786/photo/india-varanasi-ghats-on-the-river-ganges.jpg?s=612x612&w=0&k=20&c=oHDhUQO5jQQrE9iAP2G4yhdGFt2WayOR7s5RUzL7RCA=" });" class="item"></div>
+                <div style="background-image: url(${pageDetails.gallery[1] || "https://media.gettyimages.com/id/645085786/photo/india-varanasi-ghats-on-the-river-ganges.jpg?s=612x612&w=0&k=20&c=oHDhUQO5jQQrE9iAP2G4yhdGFt2WayOR7s5RUzL7RCA=" });" class="item col-2"></div>
+                <div style="background-image: url(${pageDetails.gallery[2] || "https://media.gettyimages.com/id/645085786/photo/india-varanasi-ghats-on-the-river-ganges.jpg?s=612x612&w=0&k=20&c=oHDhUQO5jQQrE9iAP2G4yhdGFt2WayOR7s5RUzL7RCA=" });" class="item row-col-2"></div>
+                <div style="background-image: url(${pageDetails.gallery[3] || "https://media.gettyimages.com/id/645085786/photo/india-varanasi-ghats-on-the-river-ganges.jpg?s=612x612&w=0&k=20&c=oHDhUQO5jQQrE9iAP2G4yhdGFt2WayOR7s5RUzL7RCA=" });" class="item row-col-2"></div>
+                <div style="background-image: url(${pageDetails.gallery[4] || "https://media.gettyimages.com/id/645085786/photo/india-varanasi-ghats-on-the-river-ganges.jpg?s=612x612&w=0&k=20&c=oHDhUQO5jQQrE9iAP2G4yhdGFt2WayOR7s5RUzL7RCA=" });" class="item"></div>
+                <div style="background-image: url(${pageDetails.gallery[5] || "https://media.gettyimages.com/id/645085786/photo/india-varanasi-ghats-on-the-river-ganges.jpg?s=612x612&w=0&k=20&c=oHDhUQO5jQQrE9iAP2G4yhdGFt2WayOR7s5RUzL7RCA=" });" class="item col-2"></div>
+                <div style="background-image: url(${pageDetails.gallery[6] || "https://media.gettyimages.com/id/645085786/photo/india-varanasi-ghats-on-the-river-ganges.jpg?s=612x612&w=0&k=20&c=oHDhUQO5jQQrE9iAP2G4yhdGFt2WayOR7s5RUzL7RCA=" });" class="item"></div>
             </div>
         </section>
 
@@ -349,3 +348,5 @@ document.querySelectorAll(".gototour").forEach((card) => {
         window.location.href = `theTour.html?id=${encodeURIComponent(cardId)}`;
     })
 })
+
+document.querySelector("#day-1").checked = true

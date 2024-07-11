@@ -1,3 +1,6 @@
+import { operators } from "./operators.js"
+
+
 
 // =================== menu function ================= //
 
@@ -34,6 +37,38 @@ window.addEventListener("scroll", () => {
     prevScrollVal = scrollVal
 
 })
+// ============= all operators function ===============//
+
+operators.forEach((optr) => {
+    let operator = `
+            <div class="operators slideOnScroll" id="${optr.id}">
+                <div class="profile">
+                    <img src="${optr.profile}" alt="">
+                </div>
+                <h3 class="name">${optr.name}</h3>
+                <h3 class="profession">${optr.profession}</h3>
+                <h3 class="expe">${optr.experience} of experience</h3>
+                <h3 class="location"><strong>From: </strong>${optr.location}</h3>
+                <h3 class="lang"><strong>languages spoken: </strong>${optr.languages_spoken} </h3>
+                <h3 class="rating">
+                    <span>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </span>
+                    ${optr.rating}
+                </h3>
+            </div>
+    `
+    document.querySelector(".operator-container").innerHTML += operator
+
+})
+
+
+
+
 // ============= Animatiions function ===============//
 let tl = gsap.timeline()
 tl.from("header", {
