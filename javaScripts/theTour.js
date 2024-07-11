@@ -1,4 +1,5 @@
 import { placeData } from "./allCards.js";
+import { operators } from "./operators.js";
 
 
 // =================== menu function ================= //
@@ -77,6 +78,12 @@ function relatedCardGenerate (){
 relatedCardGenerate()
 // console.log(placeData.filter( elem => elem.id == cardId)[0])
 let pageDetails = placeData.filter( elem => elem.id == cardId)[0]
+
+let index = Math.floor((Math.random() * operators.length))
+
+// console.log(operators[index])
+
+
 
 let tourPage = `
 <section class="tour-hero main-p">
@@ -240,26 +247,28 @@ let tourPage = `
                         <div class="about">
                             <div class="descrip">
                                 <span>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quisquam
-                                        doloribus reiciendis laborum quae natus sapiente, accusantium temporibus
-                                        repudiandae quibusdam? Sapiente ad magni officia labore blanditiis consectetur
-                                        amet nihil eum!</p>
-                                </span>
-                                <span>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quisquam
-                                        doloribus reiciendis laborum quae natus sapiente, accusantium temporibus
-                                        repudiandae quibusdam? Sapiente ad magni officia labore blanditiis consectetur
-                                        amet nihil eum!</p>
+                                    <p>${operators[index].description}</p>
                                 </span>
                             </div>
-                            <div class="profile">
-                                <div class="image">
-                                    <img src="images/paris.jpg" alt="profile">
+                            <div class="operators slideOnScroll" id="${operators[index].id}">
+                                <div class="profile-cont">
+                                    <img src="${operators[index].profile}" alt="">
                                 </div>
-                                <div class="name">John Doe</div>
-                                <div class="position">CEO</div>
-                                <div class="email">john@doe.com</div>
-                                <div class="phone">+1 234 567 890</div>
+                                <h3 class="name">${operators[index].name}</h3>
+                                <h3 class="profession">${operators[index].profession}</h3>
+                                <h3 class="expe">${operators[index].experience} of experience</h3>
+                                <h3 class="location"><strong>From: </strong>${operators[index].location}</h3>
+                                <h3 class="lang"><strong>languages spoken: </strong>${operators[index].languages_spoken} </h3>
+                                <h3 class="rating">
+                                    <span>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </span>
+                                    ${operators[index].rating}
+                                </h3>
                             </div>
                         </div>
 

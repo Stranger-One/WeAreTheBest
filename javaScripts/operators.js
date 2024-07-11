@@ -7,7 +7,8 @@ export const operators = [
         rating: 4.8,
         location: "Manali, Himachal Pradesh",
         experience: "10 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Rajesh Sharma is a seasoned adventure guide with a decade of experience in the rugged terrains of Manali, Himachal Pradesh. His expertise in mountaineering, trekking, and river rafting has made him a favorite among thrill-seekers. Rajesh's intimate knowledge of the local geography and weather conditions ensures that his clients are always in safe hands. Fluent in Hindi and English, he effortlessly communicates with both domestic and international tourists, enriching their adventure experiences with fascinating local tales and historical insights. Rajesh is also known for his responsible tourism practices, emphasizing environmental conservation and sustainable adventure. His high rating is a testament to his dedication, professionalism, and the unforgettable adventures he crafts for each visitor."
     },
     {
         id: "OP100001",
@@ -17,7 +18,8 @@ export const operators = [
         rating: 4.7,
         location: "Ahmedabad, Gujarat",
         experience: "8 years",
-        languages_spoken: ["Gujarati", "Hindi", "English"]
+        languages_spoken: ["Gujarati", "Hindi", "English"],
+        description: "Aarti Patel is a passionate cultural tour guide based in Ahmedabad, Gujarat. With 8 years of experience, she specializes in providing immersive cultural experiences that highlight the rich heritage of Gujarat. Aarti's tours often include visits to ancient temples, vibrant markets, and historical landmarks. She is fluent in Gujarati, Hindi, and English, allowing her to cater to a diverse clientele. Aarti's deep-rooted knowledge of local customs, traditions, and festivals provides her guests with an authentic and enriching experience. Her warm personality and storytelling skills make her tours engaging and educational. Aarti is committed to promoting sustainable tourism and often incorporates community interactions into her itineraries."
     },
     {
         id: "OP100002",
@@ -27,7 +29,8 @@ export const operators = [
         rating: 4.9,
         location: "Ranthambore, Rajasthan",
         experience: "12 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Akash Verma is an expert wildlife safari guide with over 12 years of experience in Ranthambore, Rajasthan. Known for his exceptional tracking skills and extensive knowledge of the local wildlife, Akash ensures that his guests have a thrilling and educational safari experience. Fluent in Hindi and English, he provides detailed information about the flora and fauna of the region, making each safari both exciting and informative. Akash is passionate about wildlife conservation and often shares insights on the importance of preserving natural habitats. His dedication to his craft and his ability to spot elusive wildlife, such as tigers, has earned him a high rating and a loyal clientele."
     },
     {
         id: "OP100003",
@@ -37,7 +40,8 @@ export const operators = [
         rating: 4.6,
         location: "Agra, Uttar Pradesh",
         experience: "7 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Sunita Kapoor is a knowledgeable historical tour guide based in Agra, Uttar Pradesh. With 7 years of experience, she specializes in providing insightful tours of Agra's iconic monuments, including the Taj Mahal and Agra Fort. Sunita's deep understanding of Mughal history and architecture allows her to offer fascinating anecdotes and historical contexts that bring the past to life for her guests. Fluent in Hindi and English, Sunita is adept at communicating with tourists from around the world. Her engaging storytelling and passion for history make her tours memorable. Sunita is committed to providing an enriching experience, ensuring that her guests leave with a deeper appreciation for Agra's rich heritage."
     },
     {
         id: "OP100004",
@@ -47,7 +51,8 @@ export const operators = [
         rating: 4.5,
         location: "Delhi",
         experience: "9 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Vikram Singh is an experienced city tour guide with a deep love for Delhi. With 9 years of experience, he offers comprehensive tours that showcase the city's rich history, culture, and modern attractions. Vikram's tours often include visits to historical landmarks such as the Red Fort, India Gate, and Qutub Minar, as well as bustling markets and contemporary hotspots. Fluent in Hindi and English, Vikram is adept at engaging with a diverse range of tourists. His extensive knowledge of Delhi's history and his ability to narrate engaging stories make his tours both informative and enjoyable. Vikram's commitment to providing a personalized experience has earned him a high rating and positive reviews from his guests."
     },
     {
         id: "OP100005",
@@ -57,7 +62,8 @@ export const operators = [
         rating: 4.7,
         location: "Kerala",
         experience: "6 years",
-        languages_spoken: ["Malayalam", "Tamil", "English"]
+        languages_spoken: ["Malayalam", "Tamil", "English"],
+        description: "Priya Iyer is a dedicated eco tour guide based in Kerala. With 6 years of experience, she specializes in providing eco-friendly tours that highlight Kerala's natural beauty. Priya's tours often include visits to lush tea plantations, serene backwaters, and vibrant wildlife sanctuaries. Fluent in Malayalam, Tamil, and English, she is skilled at communicating with a diverse clientele. Priya's passion for nature and sustainability is evident in her tours, where she emphasizes the importance of conservation and responsible tourism. Her engaging personality and extensive knowledge of Kerala's flora and fauna make her tours both educational and enjoyable. Priya's commitment to promoting eco-friendly practices has earned her a high rating among environmentally conscious travelers."
     },
     {
         id: "OP100006",
@@ -67,7 +73,8 @@ export const operators = [
         rating: 4.8,
         location: "Lucknow, Uttar Pradesh",
         experience: "5 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Rahul Gupta is a passionate food tour guide based in Lucknow, Uttar Pradesh. With 5 years of experience, he specializes in providing culinary tours that explore the rich flavors of Lucknow's cuisine. Rahul's tours often include visits to local eateries, street food vendors, and historical restaurants, offering guests a taste of traditional Awadhi dishes. Fluent in Hindi and English, Rahul is adept at engaging with both domestic and international tourists. His deep knowledge of Lucknow's culinary history and his ability to share interesting anecdotes about the city's food culture make his tours a delight for food enthusiasts. Rahul's dedication to providing a unique and immersive food experience has earned him a high rating and positive feedback from his guests."
     },
     {
         id: "OP100007",
@@ -77,7 +84,8 @@ export const operators = [
         rating: 4.9,
         location: "Coorg, Karnataka",
         experience: "11 years",
-        languages_spoken: ["Kannada", "English"]
+        languages_spoken: ["Kannada", "English"],
+        description: "Asha Menon is an experienced nature tour guide with a deep love for the scenic beauty of Coorg, Karnataka. With 11 years of experience, she specializes in providing tours that highlight the natural wonders of Coorg, including its coffee plantations, waterfalls, and wildlife. Fluent in Kannada and English, Asha is skilled at communicating with a diverse range of tourists. Her extensive knowledge of the local flora and fauna, as well as her passion for environmental conservation, makes her tours both informative and enjoyable. Asha's warm personality and dedication to providing a memorable experience have earned her a high rating and a loyal clientele. She is committed to promoting sustainable tourism and often incorporates eco-friendly practices into her tours."
     },
     {
         id: "OP100008",
@@ -87,7 +95,8 @@ export const operators = [
         rating: 4.6,
         location: "Jaipur, Rajasthan",
         experience: "10 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Arjun Kumar is a knowledgeable art tour guide based in Jaipur, Rajasthan. With 10 years of experience, he specializes in providing tours that explore the rich artistic heritage of Jaipur. Arjun's tours often include visits to art galleries, traditional craft workshops, and historical landmarks adorned with exquisite artwork. Fluent in Hindi and English, Arjun is skilled at communicating with both domestic and international tourists. His deep understanding of Jaipur's art history and his ability to share fascinating stories about the city's artistic traditions make his tours both engaging and educational. Arjun's passion for art and his commitment to promoting local artists have earned him a high rating and positive reviews from his guests."
     },
     {
         id: "OP100009",
@@ -97,7 +106,8 @@ export const operators = [
         rating: 4.7,
         location: "Varanasi, Uttar Pradesh",
         experience: "8 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Rekha Rani is a passionate music tour guide based in Varanasi, Uttar Pradesh. With 8 years of experience, she specializes in providing tours that explore the rich musical heritage of Varanasi. Rekha's tours often include visits to music schools, live performances, and interactions with local musicians, offering guests a deep insight into the city's musical traditions. Fluent in Hindi and English, Rekha is adept at engaging with both domestic and international tourists. Her extensive knowledge of Varanasi's music scene and her ability to share captivating stories about the city's musical history make her tours both enlightening and enjoyable. Rekha's dedication to preserving and promoting Varanasi's musical heritage has earned her a high rating and positive feedback from her guests."
     },
     {
         id: "OP100010",
@@ -107,7 +117,8 @@ export const operators = [
         rating: 4.8,
         location: "Mumbai, Maharashtra",
         experience: "12 years",
-        languages_spoken: ["Marathi", "Hindi", "English"]
+        languages_spoken: ["Marathi", "Hindi", "English"],
+        description: "Amit Mishra is an experienced architecture tour guide based in Mumbai, Maharashtra. With 12 years of experience, he specializes in providing tours that highlight the architectural marvels of Mumbai. Amit's tours often include visits to iconic landmarks such as the Gateway of India, Chhatrapati Shivaji Terminus, and various colonial-era buildings. Fluent in Marathi, Hindi, and English, Amit is skilled at communicating with a diverse range of tourists. His deep understanding of Mumbai's architectural history and his ability to share fascinating insights about the city's buildings make his tours both informative and engaging. Amit's passion for architecture and his commitment to providing a memorable experience have earned him a high rating and positive reviews from his guests."
     },
     {
         id: "OP100011",
@@ -117,7 +128,8 @@ export const operators = [
         rating: 4.7,
         location: "Nashik, Maharashtra",
         experience: "7 years",
-        languages_spoken: ["Marathi", "Hindi", "English"]
+        languages_spoken: ["Marathi", "Hindi", "English"],
+        description: "Vidya Nair is a knowledgeable wine tour guide based in Nashik, Maharashtra. With 7 years of experience, she specializes in providing tours that explore the vineyards and wineries of Nashik, often referred to as the 'Wine Capital of India'. Vidya's tours include visits to various wineries where guests can learn about the wine-making process, enjoy wine tastings, and explore the scenic vineyards. Fluent in Marathi, Hindi, and English, Vidya is skilled at engaging with a diverse range of tourists. Her deep understanding of wine production and her ability to share interesting anecdotes about Nashik's wine industry make her tours both educational and enjoyable. Vidya's passion for wine and her commitment to providing a unique and enriching experience have earned her a high rating among wine enthusiasts."
     },
     {
         id: "OP100012",
@@ -127,7 +139,8 @@ export const operators = [
         rating: 4.6,
         location: "Goa",
         experience: "9 years",
-        languages_spoken: ["Konkani", "Hindi", "English"]
+        languages_spoken: ["Konkani", "Hindi", "English"],
+        description: "Sanjeev Pandey is an experienced fishing guide based in Goa. With 9 years of experience, he specializes in providing fishing tours that explore the rich marine life of Goa. Sanjeev's tours often include deep-sea fishing excursions, river fishing, and traditional fishing techniques. Fluent in Konkani, Hindi, and English, Sanjeev is adept at engaging with both domestic and international tourists. His extensive knowledge of local fishing spots and his ability to share tips and techniques make his tours both informative and enjoyable. Sanjeev's passion for fishing and his commitment to providing a memorable experience have earned him a high rating and positive reviews from his guests."
     },
     {
         id: "OP100013",
@@ -137,7 +150,8 @@ export const operators = [
         rating: 4.8,
         location: "Kerala Backwaters",
         experience: "11 years",
-        languages_spoken: ["Malayalam", "English"]
+        languages_spoken: ["Malayalam", "English"],
+        description: "Neha Shah is a dedicated cruise tour guide based in the picturesque Kerala Backwaters. With 11 years of experience, she specializes in providing serene and immersive backwater cruises that offer guests a unique perspective of Kerala's natural beauty. Neha's tours often include houseboat cruises, visits to small villages, and insights into the local culture and lifestyle. Fluent in Malayalam and English, Neha is skilled at communicating with a diverse range of tourists. Her extensive knowledge of the Kerala Backwaters and her ability to share captivating stories about the region make her tours both relaxing and informative. Neha's passion for promoting the beauty of Kerala and her commitment to providing a memorable cruise experience have earned her a high rating and positive feedback from her guests."
     },
     {
         id: "OP100014",
@@ -147,7 +161,8 @@ export const operators = [
         rating: 4.7,
         location: "Ladakh",
         experience: "6 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Rohan Joshi is a passionate photography tour guide based in Ladakh. With 6 years of experience, he specializes in providing photography tours that capture the breathtaking landscapes and unique culture of Ladakh. Rohan's tours often include visits to stunning locations such as Pangong Lake, Nubra Valley, and ancient monasteries, offering guests ample opportunities to hone their photography skills. Fluent in Hindi and English, Rohan is adept at engaging with both domestic and international tourists. His extensive knowledge of photography techniques and his ability to provide personalized guidance make his tours both educational and enjoyable. Rohan's dedication to capturing the beauty of Ladakh and his commitment to providing a unique photography experience have earned him a high rating among photography enthusiasts."
     },
     {
         id: "OP100015",
@@ -157,7 +172,8 @@ export const operators = [
         rating: 4.9,
         location: "Uttarakhand",
         experience: "8 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Richa Mehta is an experienced hiking guide with a deep love for the pristine landscapes of Uttarakhand. With 8 years of experience, she specializes in providing hiking tours that explore the breathtaking beauty of the Himalayan foothills. Richa's tours often include treks to scenic locations such as Valley of Flowers, Kedarnath, and Nanda Devi, offering guests an opportunity to experience the tranquility and grandeur of the mountains. Fluent in Hindi and English, Richa is skilled at communicating with a diverse range of tourists. Her extensive knowledge of local trails and her ability to share fascinating insights about the region's flora and fauna make her tours both informative and enjoyable. Richa's passion for hiking and her commitment to promoting sustainable tourism have earned her a high rating and positive reviews from her guests."
     },
     {
         id: "OP100016",
@@ -167,7 +183,8 @@ export const operators = [
         rating: 4.8,
         location: "Jaisalmer, Rajasthan",
         experience: "5 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Vivek Arora is a dedicated desert safari guide based in Jaisalmer, Rajasthan. With 5 years of experience, he specializes in providing thrilling desert safari tours that explore the majestic Thar Desert. Vivek's tours often include camel rides, dune bashing, and cultural experiences such as traditional Rajasthani music and dance performances. Fluent in Hindi and English, Vivek is adept at engaging with both domestic and international tourists. His extensive knowledge of the desert landscape and his ability to share captivating stories about the region's history and culture make his tours both exciting and informative. Vivek's passion for adventure and his commitment to providing a memorable desert safari experience have earned him a high rating and positive feedback from his guests."
     },
     {
         id: "OP100017",
@@ -177,26 +194,29 @@ export const operators = [
         rating: 4.7,
         location: "Delhi",
         experience: "9 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Anita Kumar is a passionate culinary tour guide based in Delhi. With 9 years of experience, she specializes in providing food tours that explore the rich and diverse flavors of Delhi's cuisine. Anita's tours often include visits to famous food markets, street food vendors, and historical eateries, offering guests a taste of traditional Delhi dishes. Fluent in Hindi and English, Anita is adept at engaging with both domestic and international tourists. Her deep knowledge of Delhi's culinary history and her ability to share interesting anecdotes about the city's food culture make her tours a delight for food enthusiasts. Anita's dedication to providing a unique and immersive food experience has earned her a high rating and positive feedback from her guests."
     },
     {
         id: "OP100018",
         profile: "https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fGluZGlhbiUyMG1lbiUyMHByb2ZpbGUlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D",
-        name: "Siddharth Singh",
+        name: "Mahesh Shah",
         profession: "Scuba Diving Guide",
         rating: 4.9,
         location: "Andaman and Nicobar Islands",
         experience: "10 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Mahesh Shah is a knowledgeable spiritual tour guide based in Varanasi, Uttar Pradesh. With 10 years of experience, he specializes in providing tours that explore the spiritual essence of Varanasi. Mahesh's tours often include visits to ancient temples, participation in traditional rituals, and insights into the city's rich spiritual heritage. Fluent in Hindi and English, Mahesh is adept at engaging with both domestic and international tourists. His deep understanding of Varanasi's religious traditions and his ability to share fascinating stories about the city's spiritual significance make his tours both enlightening and enjoyable. Mahesh's passion for spirituality and his commitment to providing a memorable and meaningful experience have earned him a high rating and positive feedback from his guests."
     },
     {
         id: "OP100019",
-        profile: "https://media.gettyimages.com/id/1292859348/photo/portrait-happy-woman-on-white-background-stock-photo.jpg?s=612x612&w=0&k=20&c=anlOqYTzuGEgpVY9ogXgq0XMypr88nwJjwi4N9hO8R4=",
-        name: "Prachi Desai",
-        profession: "Bird Watching Guide",
+        profile: "https://media.gettyimages.com/id/157581006/photo/young-sikh.jpg?s=612x612&w=0&k=20&c=lZKHmp0tPBwiLV52iRpf8XElfmo6UF6O6Jh2wdtffB4=",
+        name: "Poonam Kumar",
+        profession: "Biking Tour Guide",
         rating: 4.8,
-        location: "Bharatpur, Rajasthan",
+        location: "Leh, Ladakh",
         experience: "7 years",
-        languages_spoken: ["Hindi", "English"]
+        languages_spoken: ["Hindi", "English"],
+        description: "Poonam Kumar is an experienced biking tour guide based in Leh, Ladakh. With 7 years of experience, she specializes in providing biking tours that explore the rugged beauty of Ladakh. Poonam's tours often include challenging routes through mountain passes, serene rides along rivers, and visits to remote villages, offering guests a unique and adventurous experience. Fluent in Hindi and English, Poonam is skilled at communicating with a diverse range of tourists. Her extensive knowledge of Ladakh's terrain and her ability to share fascinating insights about the region make her tours both exciting and informative. Poonam's passion for biking and her commitment to providing a memorable and thrilling experience have earned her a high rating and positive reviews from her guests."
     }
 ]
